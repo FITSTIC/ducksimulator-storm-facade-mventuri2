@@ -1,2 +1,2 @@
 # duck_simulator
-Thisis a duck simulator example.
+This is a duck simulator example.
