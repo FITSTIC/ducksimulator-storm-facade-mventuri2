@@ -1,15 +1,18 @@
+/// <summary>
+/// Papera che è in grado di volare, nuotare e fare quack
+/// </summary>
 public class MallardDuck : Duck, IFlayable, IQuackable, ISwimable
 {
-    private int totFlyKM, totSwimKM;
+    private int totFly, totSwim;
     public override string Name => "Mallard duck";
 
-    public int TotalFlyKM => totFlyKM;
+    public int TotalFly => totFly;
 
-    public int TotalSwimKM => totSwimKM;
+    public int TotalSwim => totSwim;
 
     public void Fly(int meters)
     {
-        totFlyKM += meters;
+        totFly += meters;
     }
 
     public string Quack()
@@ -19,22 +22,25 @@ public class MallardDuck : Duck, IFlayable, IQuackable, ISwimable
 
     public void Swim(int meters)
     {
-        totSwimKM += meters;
+        totSwim += meters;
     }
 }
 
+/// <summary>
+/// Papera che è in grado di volare, nuotare e fare quack
+/// </summary>
 public class ReadHeadDuck : Duck, IFlayable, IQuackable, ISwimable
 {
-    private int totFlyKM, totSwimKM;
+    private int totFly, totSwim;
     public override string Name => "Red head duck";
 
-    public int TotalFlyKM => totFlyKM;
+    public int TotalFly => totFly;
 
-    public int TotalSwimKM => totSwimKM;
+    public int TotalSwim => totSwim;
 
     public void Fly(int meters)
     {
-        totFlyKM += meters;
+        totFly += meters;
     }
 
     public string Quack()
@@ -44,16 +50,18 @@ public class ReadHeadDuck : Duck, IFlayable, IQuackable, ISwimable
 
     public void Swim(int meters)
     {
-        totSwimKM += meters;
+        totSwim += meters;
     }
 }
-
+/// <summary>
+/// Papera che è in grado di nuotare e fare quack
+/// </summary>
 public class RubberDuck : Duck, IQuackable, ISwimable
 {
-    private int totSwimKM;
+    private int totSwim;
     public override string Name => "Rubber duck";
 
-    public int TotalSwimKM => totSwimKM;
+    public int TotalSwim => totSwim;
 
     public string Quack()
     {
@@ -61,10 +69,13 @@ public class RubberDuck : Duck, IQuackable, ISwimable
     }
 
     public void Swim(int meters){
-        totSwimKM += 1;
+        totSwim += 1;
     }
 }
 
+/// <summary>
+/// Papera che non è in grado nè di nuotare nè di volare nè di fare Quack
+/// </summary>
 public class DecoyDuck : Duck
 {
     public override string Name => "Decoy duck";
