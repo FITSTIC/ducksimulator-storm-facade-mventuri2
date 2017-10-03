@@ -9,11 +9,13 @@ public abstract class Duck
 
 public interface IFlayable
 {
+    int TotalFlyKM { get; }
     void Fly(int meters);
 }
 
 public interface ISwimable
 {
+    int TotalSwimKM { get; }
     void Swim(int meters);
 }
 
