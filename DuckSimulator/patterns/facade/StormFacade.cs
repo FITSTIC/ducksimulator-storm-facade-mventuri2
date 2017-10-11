@@ -5,7 +5,7 @@ using System.Collections.Generic;
 /// Interfaccia del sistema Stormo.
 /// Uno stormo viene riempito di papere e poi viene fatto migrare verso una direzione.
 /// </summary>
-public interface Storm<Tduck> where Tduck : Duck, new()
+public interface IStorm<Tduck> where Tduck : Duck, new()
 {
     /// <summary>
     /// Lista delle papere che compongono lo stormo
