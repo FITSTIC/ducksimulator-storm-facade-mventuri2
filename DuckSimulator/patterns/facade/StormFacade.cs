@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 
 /// <summary>
@@ -33,4 +32,27 @@ public interface IStorm<Tduck> where Tduck : Duck, new()
     /// <param name="dir">Direzione verso la quale tutto lo stormo sta migrando</param>
     /// <param name="distance">Distanza che deve percorrere lo stormo</param>
     void Migrate(Direction dir, double distance);
+}
+
+public class Storm : IStorm<MallardDuck>
+{
+    public Storm()
+    {
+
+    }
+    public List<MallardDuck> Ducks => throw new System.NotImplementedException();
+
+    public double PositionX => throw new System.NotImplementedException();
+
+    public double PositionY => throw new System.NotImplementedException();
+
+    public void FillStorm(int nDucks)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void Migrate(Direction dir, double distance)
+    {
+        throw new System.NotImplementedException();
+    }
 }
