@@ -1,6 +1,6 @@
 language: csharp
 mono: none
-sudo: required
 dotnet: 2.0.0
 script:
-  - ./DuckSimulator/build.sh --quiet verify
+  - dotnet restore ./DuckSimulator
+  - dotnet build ./DuckSimulator
