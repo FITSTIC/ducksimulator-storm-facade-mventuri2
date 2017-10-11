@@ -2,4 +2,4 @@ language: csharp
 mono: none
 dotnet: 2.0.0
 script:
-  - ./DuckSimulator/build.sh --quiet verify
+  - ./build.sh --quiet verify
