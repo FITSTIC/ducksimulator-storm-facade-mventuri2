@@ -8,6 +8,13 @@ public abstract class Duck
     /// </summary>
     /// <returns>Il nome della papera</returns>
     public abstract string Name {get;}
+
+    /// <summary>
+    /// Direzione che la papera ha preso
+    /// </summary>
+    /// <returns></returns>
+    public Direction CurrentDirection {get; set;}
+
     /// <summary>
     /// Mostra una frase con la quale la papera si presenta
     /// </summary>
@@ -21,7 +28,7 @@ public abstract class Duck
 /// <summary>
 /// Interfaccia che permette di volare
 /// </summary>
-public interface IFlayable
+public interface IFlyable
 {
     /// <summary>
     /// Totale dei metri percorsi volando

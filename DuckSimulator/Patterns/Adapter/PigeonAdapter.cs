@@ -1,7 +1,7 @@
 /// <summary>
 /// Adattatore che permette di utilizzare un piccione come una papera
 /// </summary>
-public class PigeonAdapter : Duck, IFlayable, IQuackable, ISwimable
+public class PigeonAdapter : Duck, IFlyable, IQuackable, ISwimable
 {
     /// <summary>
     /// Contatori totali del nuoto e del volo

@@ -1,7 +1,7 @@
 /// <summary>
 /// Papera che è in grado di volare, nuotare e fare quack
 /// </summary>
-public class MallardDuck : Duck, IFlayable, IQuackable, ISwimable
+public class MallardDuck : Duck, IFlyable, IQuackable, ISwimable
 {
     private int totFly, totSwim;
     public override string Name => "Mallard duck";
@@ -29,7 +29,7 @@ public class MallardDuck : Duck, IFlayable, IQuackable, ISwimable
 /// <summary>
 /// Papera che è in grado di volare, nuotare e fare quack
 /// </summary>
-public class ReadHeadDuck : Duck, IFlayable, IQuackable, ISwimable
+public class ReadHeadDuck : Duck, IFlyable, IQuackable, ISwimable
 {
     private int totFly, totSwim;
     public override string Name => "Red head duck";
