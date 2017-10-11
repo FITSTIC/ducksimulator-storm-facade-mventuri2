@@ -6,12 +6,12 @@ public sealed class Pigeon
     /// <summary>
     /// Contatori totali dei metri impiegati nelle azioni di camminare e volare
     /// </summary>
-    private int totMetersWalk, totFlyAway;
+    private double totMetersWalk, totFlyAway;
     /// <summary>
     /// Azione cammina
     /// </summary>
     /// <param name="meters">Metri da camminare</param>
-    public void Walk(int meters)
+    public void Walk(double meters)
     {
         totMetersWalk += meters;
     }
@@ -28,7 +28,7 @@ public sealed class Pigeon
     /// Azione di volare
     /// </summary>
     /// <param name="meters">Metri da volare</param>
-    public void FlyAway(int meters)
+    public void FlyAway(double meters)
     {
         totFlyAway += meters;
     }

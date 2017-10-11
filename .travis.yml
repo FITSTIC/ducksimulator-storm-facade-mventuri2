@@ -2,6 +2,6 @@ language: csharp
 mono: none
 dotnet: 2.0.0
 script:
-  - dotnet restore ./DuckSimulator
-  - dotnet build ./DuckSimulator
+  - dotnet restore
+  - dotnet build
   - dotnet test ./FacadeTest

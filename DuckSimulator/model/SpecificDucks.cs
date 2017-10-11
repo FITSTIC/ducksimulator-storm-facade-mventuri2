@@ -3,14 +3,14 @@
 /// </summary>
 public class MallardDuck : Duck, IFlyable, IQuackable, ISwimable
 {
-    private int totFly, totSwim;
+    private double totFly, totSwim;
     public override string Name => "Mallard duck";
 
-    public int TotalFly => totFly;
+    public double TotalFly => totFly;
 
-    public int TotalSwim => totSwim;
+    public double TotalSwim => totSwim;
 
-    public void Fly(int meters)
+    public void Fly(double meters)
     {
         totFly += meters;
     }
@@ -20,7 +20,7 @@ public class MallardDuck : Duck, IFlyable, IQuackable, ISwimable
         return "Quack";
     }
 
-    public void Swim(int meters)
+    public void Swim(double meters)
     {
         totSwim += meters;
     }
@@ -31,14 +31,14 @@ public class MallardDuck : Duck, IFlyable, IQuackable, ISwimable
 /// </summary>
 public class ReadHeadDuck : Duck, IFlyable, IQuackable, ISwimable
 {
-    private int totFly, totSwim;
+    private double totFly, totSwim;
     public override string Name => "Red head duck";
 
-    public int TotalFly => totFly;
+    public double TotalFly => totFly;
 
-    public int TotalSwim => totSwim;
+    public double TotalSwim => totSwim;
 
-    public void Fly(int meters)
+    public void Fly(double meters)
     {
         totFly += meters;
     }
@@ -48,7 +48,7 @@ public class ReadHeadDuck : Duck, IFlyable, IQuackable, ISwimable
         return "Quack";
     }
 
-    public void Swim(int meters)
+    public void Swim(double meters)
     {
         totSwim += meters;
     }
@@ -58,17 +58,17 @@ public class ReadHeadDuck : Duck, IFlyable, IQuackable, ISwimable
 /// </summary>
 public class RubberDuck : Duck, IQuackable, ISwimable
 {
-    private int totSwim;
+    private double totSwim;
     public override string Name => "Rubber duck";
 
-    public int TotalSwim => totSwim;
+    public double TotalSwim => totSwim;
 
     public string Quack()
     {
         return "Squack";
     }
 
-    public void Swim(int meters){
+    public void Swim(double meters){
         totSwim += 1;
     }
 }

@@ -34,12 +34,12 @@ public interface IFlyable
     /// Totale dei metri percorsi volando
     /// </summary>
     /// <returns></returns>
-    int TotalFly { get; }
+    double TotalFly { get; }
     /// <summary>
     /// Azione volo
     /// </summary>
     /// <param name="meters">metri da fare volando</param>
-    void Fly(int meters);
+    void Fly(double meters);
 }
 
 /// <summary>
@@ -51,12 +51,12 @@ public interface ISwimable
     /// Totale dei metri percorsi nuotando
     /// </summary>
     /// <returns></returns>
-    int TotalSwim { get; }
+    double TotalSwim { get; }
     /// <summary>
     /// Azione nuoto
     /// </summary>
     /// <param name="meters">metri da fare nuotando</param>
-    void Swim(int meters);
+    void Swim(double meters);
 }
 
 /// <summary>

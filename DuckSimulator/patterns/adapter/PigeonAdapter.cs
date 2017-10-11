@@ -6,7 +6,7 @@ public class PigeonAdapter : Duck, IFlyable, IQuackable, ISwimable
     /// <summary>
     /// Contatori totali del nuoto e del volo
     /// </summary>
-    private int totFly, totSwim;
+    private double totFly, totSwim;
     /// <summary>
     /// Modello del piccione da adattare
     /// </summary>
@@ -26,16 +26,16 @@ public class PigeonAdapter : Duck, IFlyable, IQuackable, ISwimable
     /// <summary>
     /// Contatore totale del volo
     /// </summary>
-    public int TotalFly => totFly;
+    public double TotalFly => totFly;
     /// <summary>
     /// Contatore totale del nuoto
     /// </summary>
-    public int TotalSwim => totSwim;
+    public double TotalSwim => totSwim;
     /// <summary>
     /// Azione di volo: invoca l'azione del volo sul piccione ed aggiorna i contatori totali
     /// </summary>
     /// <param name="meters">Metri da volare</param>
-    public void Fly(int meters)
+    public void Fly(double meters)
     {
         this.pigeon.FlyAway(meters);
         totFly += meters;
@@ -50,7 +50,7 @@ public class PigeonAdapter : Duck, IFlyable, IQuackable, ISwimable
     /// I metri da nuotare vengono raddoppiati perché il meccanismo di camminata è meno potente rispetto al meccanismo di nuoto.
     /// </summary>
     /// <param name="meters">Metri da nuotare</param>
-    public void Swim(int meters)
+    public void Swim(double meters)
     {
         this.pigeon.Walk(meters*2);
         totSwim += meters;

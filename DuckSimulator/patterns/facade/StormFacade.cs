@@ -27,24 +27,38 @@ public interface IStorm<Tduck> where Tduck : Duck, new()
     /// <returns></returns>
     double PositionY { get; }
     /// <summary>
+    /// Contatore totale dello spazio percorso dallo stormo durante la migrazione.
+    /// </summary>
+    /// <returns></returns>
+    double TotalDistance { get; }
+    /// <summary>
     /// Fa migrare lo stormo verso una direzione
     /// </summary>
     /// <param name="dir">Direzione verso la quale tutto lo stormo sta migrando</param>
     /// <param name="distance">Distanza che deve percorrere lo stormo</param>
     void Migrate(Direction dir, double distance);
+    /// <summary>
+    /// Distanza in linea d'aria dal punto di partenza.
+    /// </summary>
+    /// <returns></returns>
+    double LineDistanceFromStart { get; }
 }
 
-public class Storm : IStorm<MallardDuck>
+public class Storm<Tduck> : IStorm<Tduck> where Tduck : Duck, new()
 {
     public Storm()
     {
 
     }
-    public List<MallardDuck> Ducks => throw new System.NotImplementedException();
+    public List<Tduck> Ducks => throw new System.NotImplementedException();
 
     public double PositionX => throw new System.NotImplementedException();
 
     public double PositionY => throw new System.NotImplementedException();
+
+    public double LineDistanceFromStart => throw new System.NotImplementedException();
+
+    public double TotalDistance => throw new System.NotImplementedException();
 
     public void FillStorm(int nDucks)
     {
