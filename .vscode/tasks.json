@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}/FacadeTest/FacadeTest.csproj"
+                "${workspaceRoot}/DuckSimulator.sln"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"
