@@ -1,5 +1,6 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace FacadeTest
 {
@@ -22,10 +23,10 @@ namespace FacadeTest
             Storm<MallardDuck> storm = new Storm<MallardDuck>();
             try
             {
-                storm.FillStorm(-15);
-                Assert.Fail();
+                storm.FillStorm(-15);     
+                Assert.Fail();           
             }
-            catch(Exception){
+            catch(ArgumentException){
 
             }
 
@@ -58,12 +59,12 @@ namespace FacadeTest
             storm.Migrate(Direction.EST, 14.9);
 
             Assert.AreEqual(82.2, storm.PositionX);
-            Assert.AreEqual(-5.6, storm.PositionY);
+            Assert.AreEqual(-5.6, storm.PositionY, "Valore: " + storm.PositionY);
             Assert.AreEqual(82.39, storm.LineDistanceFromStart);
 
             Assert.AreEqual(storm.TotalDistance, 239.6);            
 
-            Assert.IsTrue(storm.Ducks.TrueForAll(dk=>dk.TotalFly == storm.TotalDistance));
+            Assert.IsTrue(storm.Ducks.TrueForAll(dk=>Math.Round(dk.TotalFly,1) == storm.TotalDistance));
         }
 
         [TestMethod]
@@ -75,16 +76,14 @@ namespace FacadeTest
             {
                 storm.Migrate(Direction.NORD, 25.3);
                 Assert.Fail();
-            }catch(Exception){
+            }catch(ArgumentException){
                 
             }
 
             Assert.AreEqual(0d, storm.PositionX);
             Assert.AreEqual(0d, storm.PositionY);
 
-            Assert.AreEqual(storm.TotalDistance, 0d);            
-
-            Assert.IsTrue(storm.Ducks.TrueForAll(dk=>dk.TotalFly == storm.TotalDistance));
+            Assert.AreEqual(storm.TotalDistance, 0d);          
         }
     }
 }
